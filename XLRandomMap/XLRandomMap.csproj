@@ -76,14 +76,6 @@ del /Q /F "G:\Steam\steamapps\common\Skater XL\Mods\XLRandomMap\"
 copy /Y "$(TargetDir)XLRandomMap.dll" "G:\Steam\steamapps\common\Skater XL\Mods\XLRandomMap\XLRandomMap.dll"
 copy /Y "$(TargetDir)XLRandomMap.pdb" "G:\Steam\steamapps\common\Skater XL\Mods\XLRandomMap\XLRandomMap.pdb"
 copy /Y "$(TargetDir)Info.json" "G:\Steam\steamapps\common\Skater XL\Mods\XLRandomMap\Info.json"
-)
-
-if "$(ConfigurationName)"=="Release" (
-mkdir $(TargetDir)XLRandomMap
-copy /Y "$(TargetDir)XLRandomMap.dll" "$(TargetDir)XLRandomMap\XLRandomMap.dll"
-copy /Y "$(TargetDir)Info.json" "$(TargetDir)XLRandomMap\Info.json"
-
-powershell Compress-Archive -Path '$(TargetDir)XLRandomMap' -DestinationPath '$(TargetDir)XLRandomMap-0-0-1.zip' -Force
 )</PostBuildEvent>
   </PropertyGroup>
 </Project>
