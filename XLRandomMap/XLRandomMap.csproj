@@ -72,10 +72,10 @@
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
     <PostBuildEvent>if "$(ConfigurationName)"=="Debug" ( 
-del /Q /F "F:\Steam\steamapps\common\Skater XL\Mods\XLRandomMap\"
-copy /Y "$(TargetDir)XLRandomMap.dll" "F:\Steam\steamapps\common\Skater XL\Mods\XLRandomMap\XLRandomMap.dll"
-copy /Y "$(TargetDir)XLRandomMap.pdb" "F:\Steam\steamapps\common\Skater XL\Mods\XLRandomMap\XLRandomMap.pdb"
-copy /Y "$(TargetDir)Info.json" "F:\Steam\steamapps\common\Skater XL\Mods\XLRandomMap\Info.json"
+del /Q /F "G:\Steam\steamapps\common\Skater XL\Mods\XLRandomMap\"
+copy /Y "$(TargetDir)XLRandomMap.dll" "G:\Steam\steamapps\common\Skater XL\Mods\XLRandomMap\XLRandomMap.dll"
+copy /Y "$(TargetDir)XLRandomMap.pdb" "G:\Steam\steamapps\common\Skater XL\Mods\XLRandomMap\XLRandomMap.pdb"
+copy /Y "$(TargetDir)Info.json" "G:\Steam\steamapps\common\Skater XL\Mods\XLRandomMap\Info.json"
 )
 
 if "$(ConfigurationName)"=="Release" (
