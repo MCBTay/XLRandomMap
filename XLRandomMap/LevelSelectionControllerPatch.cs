@@ -20,6 +20,7 @@ namespace XLRandomMap
 
                 var index = new Random().Next(levels.Count);
 
+                UISounds.Instance?.PlayOneShotSelectMajor();
                 LevelManager.Instance.PlayLevel(levels[index]);
             }
         }
