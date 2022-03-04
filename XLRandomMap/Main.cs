@@ -12,7 +12,6 @@ namespace XLRandomMap
     {
         public static bool Enabled;
         private static Harmony Harmony;
-        private static GameObject UserInterfaceGameObject;
 
         static bool Load(UnityModManager.ModEntry modEntry)
         {
@@ -39,7 +38,6 @@ namespace XLRandomMap
             }
             else
             {
-                Object.DestroyImmediate(UserInterfaceGameObject);
                 Harmony.UnpatchAll(Harmony.Id);
             }
 
@@ -49,8 +47,6 @@ namespace XLRandomMap
 #if DEBUG
         static bool Unload(UnityModManager.ModEntry modEntry)
         {
-            Object.DestroyImmediate(UserInterfaceGameObject);
-
             Harmony?.UnpatchAll();
             return true;
         }
