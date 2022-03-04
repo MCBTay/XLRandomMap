@@ -1,0 +1,12 @@
+{
+  "Id": "XLRandomMap",
+  "DisplayName": "XL Random Map",
+  "Author": "mcbtay",
+  "Version": "0.0.1",
+  "ManagerVersion": "0.22.5.0",
+  "Requirements": [],
+  "AssemblyName": "XLRandomMap.dll",
+  "EntryMethod": "XLRandomMap.Main.Load",
+  "HomePage": "https://github.com/MCBTay/XLRandomMap",
+  "Repository": ""
+}
