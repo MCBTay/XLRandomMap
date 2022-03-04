@@ -9,7 +9,7 @@ namespace XLRandomMap
         [HarmonyPatch(typeof(LevelSelectionController), "Update")]
         public static class UpdatePatch
         {
-            static void Postfix(LevelSelectionController __instance)
+            static void Postfix()
             {
                 var player = PlayerController.Instance.inputController.player;
 
