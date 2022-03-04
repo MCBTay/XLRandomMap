@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Linq;
 using HarmonyLib;
 
 namespace XLRandomMap
@@ -14,10 +15,12 @@ namespace XLRandomMap
 
                 if (!player.GetButtonDown("X")) return;
 
-                var random = new Random();
-                var index = random.Next(LevelManager.Instance.ModLevels.Count);
+                var easyDayLevels = LevelManager.Instance.CommunityLevels.Concat(LevelManager.Instance.Levels);
+                var levels = LevelManager.Instance.ModLevels.Concat(easyDayLevels).ToList();
 
-                LevelManager.Instance.PlayLevel(LevelManager.Instance.ModLevels[index]);
+                var index = new Random().Next(levels.Count);
+
+                LevelManager.Instance.PlayLevel(levels[index]);
             }
         }
     }
