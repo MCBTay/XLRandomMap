@@ -6,8 +6,6 @@ namespace XLRandomMap
     [Serializable]
     public class Settings : UnityModManager.ModSettings
     {
-        public bool AutoLoadMaps { get; set; } = true;
-
         public static Settings Instance { get; set; }
         public static UnityModManager.ModEntry ModEntry;
 
