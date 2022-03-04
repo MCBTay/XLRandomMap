@@ -60,7 +60,6 @@ jobs:
       run: |
         New-Item -Path "XLRandomMap\bin\Release\" -name "XLRandomMap" -ItemType "directory"
         Copy-Item "XLRandomMap\bin\Release\XLRandomMap.dll" -Destination "XLRandomMap\bin\Release\XLRandomMap/XLRandomMap.dll"
-        Copy-Item "XLRandomMap\bin\Release\XLRandomMap.Utilities.dll" "XLRandomMap\bin\Release\XLRandomMap\XLRandomMap.Utilities.dll"
         Copy-Item "XLRandomMap\bin\Release\Info.json" "XLRandomMap\bin\Release\XLRandomMap\Info.json"
         
     - name: Create ZIP
