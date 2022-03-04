@@ -19,10 +19,6 @@ namespace XLRandomMap
             Settings.Instance = UnityModManager.ModSettings.Load<Settings>(modEntry);
             Settings.ModEntry = modEntry;
 
-            UserInterfaceGameObject = new GameObject();
-            UserInterfaceGameObject.AddComponent<UserInterface>();
-            Object.DontDestroyOnLoad(UserInterfaceGameObject);
-
             modEntry.OnToggle = OnToggle;
 #if DEBUG
             modEntry.OnUnload = Unload;
