@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace XLRandomMap
 {
-    public class Class1
+    internal class Settings
     {
     }
 }
